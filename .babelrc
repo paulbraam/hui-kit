@@ -1,0 +1,14 @@
+{
+  "presets": ["@babel/preset-typescript"],
+  "plugins": [
+    [
+      "styled-components",
+      {
+        "displayName": false,
+        "ssr": true,
+        "preprocess": false,
+        "filename": false
+      }
+    ]
+  ]
+}

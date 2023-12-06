@@ -1,0 +1,156 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "import"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".ts",
+          ".tsx"
+        ],
+        "moduleDirectory": [
+          "src",
+          "node_modules"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "internal",
+          "external",
+          "index",
+          "sibling",
+          "parent",
+          "builtin",
+          "object",
+          "type"
+        ]
+      }
+    ],
+    "indent": [
+      "error",
+      2
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "none",
+        "jsxBracketSameLine": false,
+        "endOfLine": "lf",
+        "jsxSingleQuote": false,
+        "tabWidth": 2,
+        "printWidth": 100,
+        "arrowParens": "always"
+      }
+    ],
+    "react/jsx-sort-props": [
+      1,
+      {
+        "callbacksLast": true,
+        "shorthandFirst": false,
+        "shorthandLast": true,
+        "multiline": "last",
+        "ignoreCase": true,
+        "noSortAlphabetically": false,
+        "reservedFirst": true
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "never",
+        "objects": "never",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }
+    ],
+    "import/no-cycle": "off",
+    "react/jsx-no-leaked-render": [
+      "error",
+      {
+        "validStrategies": [
+          "coerce"
+        ]
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "arrow-body-style": [
+      "error",
+      "as-needed"
+    ],
+    "camelcase": "off",
+    "no-shadow": "off",
+    "no-unused-vars": "off",
+    "implicit-arrow-linebreak": "off",
+    "no-confusing-arrow": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error"
+    ],
+    "import/no-anonymous-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": [
+      "error",
+      "never",
+      {
+        "css": "always"
+      }
+    ],
+    "max-classes-per-file": "off",
+    "object-curly-newline": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          "jsx",
+          ".tsx"
+        ]
+      }
+    ],
+    "react/display-name": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/prefer-stateless-function": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function"
+      }
+    ],
+    "no-param-reassign": "off",
+    "react/require-default-props": "off"
+  }
+}
